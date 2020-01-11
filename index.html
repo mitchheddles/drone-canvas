@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Canvas</title>
+    <link rel="stylesheet" href="./static/styles.css" />
+  </head>
+  <body>
+    <div id="background" class="background">
+    </div>
+    <header class="header">
+      <div class="logo">
+      </div>
+      <section class="icons">
+        <div class="measurement icons__battery">
+          <svg width="53" height="29" viewBox="0 0 53 29" xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero" fill="#FFF"><path d="M49.867 5.768h-5.78V.672c0-.392-.284-.616-.624-.616H1.133C.737.056.51.336.51.672v26.656c0 .392.283.616.623.616h42.33c.397 0 .624-.28.624-.616v-5.096h5.78c.396 0 .623-.28.623-.616V6.384c.057-.392-.227-.616-.623-.616zM40.963 25.3H3.633V2.7h37.33v22.6zm6.547-5.842h-3.057V8.542h3.057v10.916z"/><path d="M7.16 6.72H33v14.56H7.16z"/></g></svg>
+          <span class="measurement__container">83%</span>
+        </div>
+        <div class="measurement icons__wind">
+          <svg width="29" height="29" viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero" fill="#FFF"><path d="M0 0v28h3V0z"/><path d="M2.261 5.447L7.96 2.312c.423-.233 1.29-.379 1.756-.296l16.3 2.71c.09.016.208.166.208.261v4.997c0 .095-.12.248-.21.264l-16.3 2.736c-.465.083-1.335-.062-1.756-.293L2.26 9.567l-1.257 1.67L6.7 14.36c.948.52 2.418.765 3.467.577l15.3-2.735C26.897 11.946 28 10.544 28 8.984V5.987c0-1.564-1.105-2.962-2.534-3.215l-15.3-2.71c-1.052-.187-2.518.06-3.467.583L1 3.78l1.261 1.667z"/><path d="M8 1v13h2V1zM15 2v10h2V2zM20 3v9h2V3z"/></g></svg>
+          <span class="measurement__container" id="measurementWind"></span>
+        </div>
+        <div class="measurement icons__speed">
+          <svg width="31" height="31" viewBox="0 0 31 31" xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero" fill="#FFF"><path d="M14.97.246A14.826 14.826 0 0 0 .122 15.092 14.826 14.826 0 0 0 14.97 29.938a14.826 14.826 0 0 0 14.846-14.846C29.815 6.91 23.185.246 14.97.246zm0 27c-6.432 0-11.693-5.015-12.093-11.354h3.23V14.17h-3.23c.215-2.984 1.538-5.661 3.508-7.661l2 2 1.2-1.2-1.939-1.939a12.012 12.012 0 0 1 7.292-2.43c2.708 0 5.231.892 7.262 2.43l-1.908 1.908 1.2 1.2 2-2A11.858 11.858 0 0 1 27 13.923h-3.23v1.723h3.322c-.307 6.462-5.63 11.6-12.123 11.6z"/><path d="M14.815 5.37l-2.492 8.922c-.308 1.077.03 2.277.923 2.954.492.37 1.108.616 1.754.616h.185c1.815-.124 2.984-1.97 2.43-3.693l-2.8-8.8zm.22 9.793H15a.76.76 0 0 1-.407-.13c-.204-.147-.278-.425-.204-.684l.574-2.035.647 1.998c.112.407-.166.833-.573.851z"/></g></svg>
+          <span class="measurement__container" id="measurementSpeed"></span>
+        </div>
+      </section>
+    </header>
+    <section class="copy">
+      <p>adiabatic lapse rate 5.4° f</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>controlled airspace: class a</p>
+      <p>adverse yaw / none</p>
+      <p>balanced control surface / none</p>
+    </section>
+    <section class="copy copy--right">
+      <p>.</p>
+      <p>.</p>
+      <p>BA,1355,SIN,3316,LHR,507,,0,744 777</p>
+      <p>BA,1355,SIN,3316,MEL,3339,Y,0,744</p>
+      <p>TOM,5013,ACE,1055,BFS,465,,0,320</p>
+    </section>
+    <footer class="footer">
+      <section>
+        <div class="measurement">
+          X&nbsp;<span class="measurement__container" id="measurementX"></span>
+        </div>
+        <div class="measurement">
+          Y&nbsp;<span class="measurement__container" id="measurementY"></span>
+        </div>
+      </section>
+      <section>
+        <div class="dial"><div class="ripple"></div></div>
+        <div class="dial"><div class="ripple"></div></div>
+        <div class="dial"><div class="ripple"></div></div>
+        <div id="radar" class="radar"></div>
+      </section>
+    </footer>
+    <div id="cursor" class="cursor">
+      <svg width="167" height="13" viewBox="0 0 167 13" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h77.751l6.828 7.267L90.866 0H167v4.152H91.866L84.58 12l-7.828-7.848H0z" fill="#FFF" fill-rule="evenodd"/></svg>
+    </div>
+    <canvas id="canvas"></canvas>
+    <script src="./lib/bundle.js"></script>
+  </body>
+</html>
